@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Employee Name</th>
+            <th>Employee Age</th>
+            <th>Employee Salary</th>
+            <th>Department name</th>
+            <th>Reporting to</th>
+        </tr>
+        <% for(var i = 0 ; i < det.length ; i++) { %>
+            <tr>
+                <td> <%= det[i].id %> </td>
+                <td><a href="/employees/<%= det[i].id %>"> <%= det[i].emp_name %> </a></td>
+                <td> <%= det[i].emp_age %> </td>
+                <td> <%= det[i].emp_salary %> </td>
+                <td> <%= det[i].name %> </td>
+                <td> <%= rep[i].reportingTo %> </td>
+                <td><a href="/<%= det[i].id %>/delete %>">Delete</a></td> 
+                <td><a href="/employees/<%= det[i].id %>/edit %>">Edit</a></td>
+            </tr>
+     <%   }; %>
+        
+
+    </table>
+    <a href="/create">Add new record</a>
+
+</body>
+</html>

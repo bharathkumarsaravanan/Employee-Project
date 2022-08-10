@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Departments</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Department Name</th>
+        </tr>
+        <% for(var i = 0 ; i < dep.length ; i++) { %>
+            <tr>
+                <td> <%= dep[i].id %> </td>
+                <td> <%= dep[i].name %> </td>
+                <td><a href="/departments/<%=dep[i].id%>/delete">Delete</a></td> 
+                <td><a href="/departments/<%= dep[i].id %>/edit">Edit</a></td>
+            </tr>
+     <%   }; %>
+        
+
+    </table>
+    <a href="/departments/add">Add new Department</a>
+
+</body>
+</html>

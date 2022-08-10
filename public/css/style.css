@@ -1,0 +1,17 @@
+body{
+    background-color: gray;
+}
+.form{
+    padding: 10% 20%;
+}
+.but1{
+    margin-left: 40%;
+    margin-top: 50px;
+}
+.btn{
+    border-color: white;
+    color: aliceblue;
+}
+.col-sm-2{
+    color: aliceblue;
+}
